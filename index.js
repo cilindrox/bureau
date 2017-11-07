@@ -12,15 +12,26 @@ const internals = {};
 
 const handler = (request, reply) => {
 
+    const items = [
+        {
+            id: 1,
+            name: 'lorem'
+        },
+        {
+            id: 2,
+            name: 'ipsum'
+        }
+    ];
+
     reply.view('index', {
         title: `bureau.com.uy | Hapi ${request.server.version}`,
         message: 'Hello World!',
         sections: [
-            { name: 'promociones' },
-            { name: 'sillas' },
-            { name: 'lineas escritorios' },
-            { name: 'amoblamientos' },
-            { name: 'empresa' }
+            { name: 'promociones', items },
+            { name: 'sillas', items: [{ name: 'lorem' }, { name: 'ipsum'}]},
+            { name: 'lineas escritorios', items: [{ name: 'lorem' }, { name: 'ipsum'}]},
+            { name: 'amoblamientos', items: [{ name: 'lorem' }, { name: 'ipsum'}]},
+            { name: 'empresa' , items: [] }
         ]
     });
 };

@@ -1,17 +1,33 @@
-<div class="title is-ancestor">
-    <div class="title">
-        bureau
+<nav id="navbar" class="navbar is-primary is-fixed-top">
+    <div class="container">
+        <!-- Left side -->
+        <nav class="navbar-brand">
+            <div class="navbar-item">
+                <h1 class="title">
+                    bureau
+                </h1>
+                <h2 class="subtitle is-vertical">
+                    equipamientos
+                </h2>
+            </div>
+        </nav>
+
+        <!-- Right side -->
+        <nav class="navbar-menu">
+            <nav class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field has-addons">
+                        <p class="control">
+                        <input class="input" type="text" placeholder="Find an item">
+                        </p>
+                        <p class="control">
+                        <button class="button">
+                            Search
+                        </button>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        </nav>
     </div>
-    <div class="title is-4 is-vertical">
-        equipamientos
-    </div>
-</div>
-<div class="container">
-    <div class="columns">
-        {{#each sections}}
-        <div class="column">
-            {{uppercase name}}
-        </div>
-        {{/each}}
-    </div>
-</div>
+</nav>
